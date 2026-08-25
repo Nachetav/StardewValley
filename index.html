@@ -2,28 +2,82 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Granja La Comarca - Inventario</title>
+    <title>Granja La Comarca - Inventario y Animales</title>
     <style>
         body { font-family: 'Courier New', monospace; background-color: #f4e8c1; color: #4a2e10; padding: 20px; }
         h1 { text-align: center; border-bottom: 2px solid #8b5a2b; padding-bottom: 10px; }
-        .item-card { background: #fff8e7; border: 2px solid #8b5a2b; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        
+        .section-header { text-align: center; color: #8b5a2b; margin-top: 30px; border-bottom: 1px solid #8b5a2b; padding-bottom: 5px; }
+        
+        .product-list, .animal-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+
+        .item-card, .animal-card { background: #fff8e7; border: 2px solid #8b5a2b; padding: 15px; border-radius: 8px; width: 250px; text-align: center; }
+        
+        /* Diferencia visual para los animales (un tono más cálido) */
+        .animal-card { background: #ffe0b2; border: 1px solid #ff9800; color: #801313;}
         .precio { color: #d97706; font-weight: bold; }
+        .animal-title { font-weight: bold; font-size: 1.2em; color: #bf360c; }
+        .animal-icon { font-size: 2.5em; margin-bottom: 5px; }
+
+        /* Estilo especial para el gato */
+        .gato-card { background: #e0f7fa; border: 1px solid #00acc1; color: #004d40; width: 220px;}
+        .gato-title { font-weight: bold; font-size: 1.2em; color: #00838f; }
+
     </style>
 </head>
 <body>
     <h1>🌾 Granja "La Comarca" - Pueblo Pelícano</h1>
-    <p>Inventario oficial de materiales y herramientas agrícolas.</p>
+    <p style="text-align: center;">Inventario oficial y residentes peludos de la granja.</p>
 
-    <div class="item-card">
-        <h3>🪓 Hacha de Cobre</h3>
-        <p>Permite romper troncos grandes de madera en la granja.</p>
-        <p class="precio">Precio: 2,000g</p>
+    <!-- Sección de Animales: ¡Aquí están pio, pia, pie y shiro! -->
+    <h2 class="section-header">Mis Queridos Animales</h2>
+    <div class="animal-list">
+        
+        <!-- Un Pollo -->
+        <div class="animal-card">
+            <div class="animal-icon">🐣</div>
+            <p class="animal-title">pio</p>
+            <p>Un pequeño y adorable pollo marrón.</p>
+        </div>
+
+        <!-- Otro Pollo -->
+        <div class="animal-card">
+            <div class="animal-icon">🐣</div>
+            <p class="animal-title">pia</p>
+            <p>El pollo más ruidoso de la granja.</p>
+        </div>
+
+        <!-- El Tercer Pollo -->
+        <div class="animal-card">
+            <div class="animal-icon">🐣</div>
+            <p class="animal-title">pie</p>
+            <p>Un pollo blanco que adora las caricias.</p>
+        </div>
+        
+        <!-- El Gato en su propia tarjeta y estilo -->
+        <div class="animal-card gato-card">
+            <div class="animal-icon">🐱</div>
+            <p class="gato-title">shiro</p>
+            <p>El guardián de la granja (y adicto a dormir).</p>
+        </div>
+
     </div>
 
-    <div class="item-card">
-        <h3>🌽 Semillas de Maíz</h3>
-        <p>Crecen durante las estaciones de verano y otoño.</p>
-        <p class="precio">Precio: 50g</p>
+    <!-- Sección de Inventario -->
+    <h2 class="section-header">Inventario de Ventas</h2>
+    <div class="product-list">
+        <div class="item-card">
+            <h3>🪓 Hacha de Cobre</h3>
+            <p>Permite romper troncos grandes de madera en la granja.</p>
+            <p class="precio">Precio: 2,000g</p>
+        </div>
+
+        <div class="item-card">
+            <h3>🌽 Semillas de Maíz</h3>
+            <p>Crecen durante las estaciones de verano y otoño.</p>
+            <p class="precio">Precio: 50g</p>
+        </div>
     </div>
+
 </body>
 </html>
